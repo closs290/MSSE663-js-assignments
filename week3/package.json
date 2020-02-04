@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint **/*.ts --fix",
-    "test": "mocha src/**/*.spec.ts"
+    "test": "mocha -r ts-node/register src/**/*.spec.ts"
   },
   "author": "Ben Closson",
   "license": "ISC",
