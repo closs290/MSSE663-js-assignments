@@ -26,10 +26,10 @@ export class myCharacter implements Character {
         this.HitPointTotal = hp;
         this.SavingThrows = saveThrows;
         this.CurrentHP = hp;
-    }
+    };
     getName(): string {
         return this.CharacterName;
-    }
+    };
     isDown(): boolean {
         return (this.CurrentHP <= 0);
     };

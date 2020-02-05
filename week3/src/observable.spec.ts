@@ -1,9 +1,10 @@
-/*import { expect } from 'chai';
+import { expect } from 'chai';
 import 'mocha';
-import {observableAssignment} from './observable';
+import { observableAssignment } from './observable';
 
 describe('observableAssignment', function() {
-    const exampleObservable = new observableAssignment([]);
+    const array = [0, 1, 2, 3];
+    const exampleObservable = observeStreamOfArray(array);
     describe('#createArray', function() {
         it('should create an array', function() {
             // expect(exampleObservable.myArray).to.be([]);
@@ -29,4 +30,4 @@ describe('observableAssignment', function() {
             // expect(true).to.be(true);
         });
     });
-});*/
+});

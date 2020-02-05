@@ -1,30 +1,22 @@
-// import { Observable, of as observableOf } from 'rxjs';
-import Rx from 'rxjs/Rx';
+import { Observable, of as observableOf } from 'rxjs';
 
-    // 1 Create an observable stream of an array (utilizing the of keyword).
-    // 2 Map over the values in the array.
-    // 3 Subscribe and ouput values to the console.
+export class observableAssignment {
 
-const Rx = require("Rx");
+    public myArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+    public observeStreamOfArray: Observable<number[]>;
 
-function getObservableArray(){
-    return Rx.Observable.create( observer => {
-        const possibleCharacterClasses = [
-            {name: 'Wizard'},
-            {name: 'Sorcerer'},
-            {name: 'Bard'},
-            {name: 'Fighter'},
-            {name: 'Ranger'},
-            {name: 'Druid'}
-        ];
-
-        possibleCharacterClasses.forEach( charClass => observer.next(charClass) );
-        observer.complete();
-    });
+    constructor() {
+        // 1 Create an observable stream of an array (utilizing the of keyword).
+        this.observeStreamOfArray = observableOf(this.myArray);
+        // 2 Map over the values in the array.
+        this.myArray.map(num => 
+            num += 1
+        );
+        // 3 Subscribe and ouput values to the console.
+        this.observeStreamOfArray.subscribe(
+            num => console.log(num),
+            () => console.log('End of array')
+        );
+    };
 }
-
-getObservableArray().subscribe(
-    charClass => console.log("You could play as a: " + charClass.name),
-    () => console.log("... and those are your options right now.")
-);
 
