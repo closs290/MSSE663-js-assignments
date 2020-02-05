@@ -1,33 +1,16 @@
 import { expect } from 'chai';
 import 'mocha';
-import { observableAssignment } from './observable';
 
 describe('observableAssignment', function() {
-    const array = [0, 1, 2, 3];
-    const exampleObservable = observeStreamOfArray(array);
-    describe('#createArray', function() {
-        it('should create an array', function() {
-            // expect(exampleObservable.myArray).to.be([]);
-        });
+    it('should create an observable', function() {
+        expect(this.observeStreamOfArray).to.be.a('object');
     });
-    describe('#createObservable', function() {
-        it('should create an observable', function() {
-            // expect(exampleObservable.myObservable).to.be([]);
-        });
+    it('should create a map of the values in the array', function() {
+        expect(this.myArray).to.equal([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
     });
-    describe('#mapValuesOfArray', function() {
-        it('should create a map of the values in the array', function() {
-            // expect(true).to.be(true);
-        });
-    });
-    describe('#subscribeToObservabe', function() {
-        it('should subscribe to the observable', function() {
-            // expect(true).to.be(true);
-        });
-    });
-    describe('#outputToConsole', function() {
-        it('should output values to console', function() {
-            // expect(true).to.be(true);
-        });
+    it('should subscribe to the observable', function() {
+        this.observeStreamOfArray.subscribe(result =>
+            expect(result.length).to.be.greaterThan(0)
+        )
     });
 });
