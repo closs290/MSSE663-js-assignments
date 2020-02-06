@@ -20,3 +20,5 @@ export class observableAssignment {
     };
 }
 
+const newObservable = new observableAssignment();
+

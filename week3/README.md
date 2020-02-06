@@ -45,7 +45,7 @@ describe('...', () => {
 
 ## Acceptance Criteria
 
-- Your new isntance should output a result to the console for each method.
+- Your new instance should output a result to the console for each method.
 - Your tests should pass 3 scenarios.
 
 ## Requirements and Caveats
