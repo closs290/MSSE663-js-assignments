@@ -1,15 +1,19 @@
 import { expect } from 'chai';
 import 'mocha';
+import { observableAssignment } from './observable';
 
 describe('observableAssignment', function() {
+    const newObservable = new observableAssignment();
+    // make observable and array?
     it('should create an observable', function() {
-        expect(this.observeStreamOfArray).to.be.a('object');
+        expect(newObservable.observeStreamOfArray).to.be.an('object');
     });
     it('should create a map of the values in the array', function() {
-        expect(this.myArray).to.equal([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+        expect(newObservable.myArray).to.include(0);
+        expect(newObservable.myArray).to.include(9);
     });
     it('should subscribe to the observable', function() {
-        this.observeStreamOfArray.subscribe( (result: number[]) =>
+        newObservable.observeStreamOfArray.subscribe( (result: number[]) =>
             expect(result.length).to.be.greaterThan(0)
         )
     });
