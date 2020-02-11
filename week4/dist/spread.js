@@ -64,8 +64,13 @@ exports.newUpdate = {
     id: 2,
     task: 'There is never a last task'
 };
-exports.newData = [...exports.data]; // , newUpdate];
-Object.assign(exports.newUpdate, exports.newData);
+exports.newData = exports.data.map(task => {
+    if (task.id === exports.newUpdate.id) {
+        task = exports.newUpdate;
+    }
+    return task;
+});
+// export const newData = [...data, newUpdate];
 console.log("\n\nMy refactor #4:");
 exports.newData.map(printTask => {
     console.log(printTask.id.toString() + ': ' + printTask.task.toString());

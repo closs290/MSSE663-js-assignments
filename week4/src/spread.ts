@@ -76,8 +76,14 @@ export const newUpdate = {
   id: 2,
   task: 'There is never a last task'
 };
-export const newData = [...data]; // , newUpdate];
-Object.assign(newUpdate, newData);
+export const newData = data.map(task => {
+  if (task.id === newUpdate.id) {
+    task = newUpdate;
+  }
+  return task;
+});
+
+// export const newData = [...data, newUpdate];
 
 console.log("\n\nMy refactor #4:");
 newData.map(printTask => {
