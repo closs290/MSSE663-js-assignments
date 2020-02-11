@@ -4,7 +4,6 @@ import { observableAssignment } from './observable';
 
 describe('observableAssignment', function() {
     const newObservable = new observableAssignment();
-    // make observable and array?
     it('should create an observable', function() {
         expect(newObservable.observeStreamOfArray).to.be.an('object');
     });

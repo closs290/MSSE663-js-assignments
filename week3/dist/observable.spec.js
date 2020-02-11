@@ -5,7 +5,6 @@ require("mocha");
 const observable_1 = require("./observable");
 describe('observableAssignment', function () {
     const newObservable = new observable_1.observableAssignment();
-    // make observable and array?
     it('should create an observable', function () {
         chai_1.expect(newObservable.observeStreamOfArray).to.be.an('object');
     });
