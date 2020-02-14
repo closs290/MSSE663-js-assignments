@@ -2,6 +2,8 @@
 export const object = { name: 'elvis', title: 'hip swinger' };
 
 // deconstruct here
+const person = object.name;
+const job = object.title;
 
 // Assign variables using ES6 so that we get (note, you cannot just make a completely new object):
 console.log(person); // 'elvis'
@@ -18,19 +20,25 @@ export const nestedObject = {
 };
 
 // deconstruct here
+const user = nestedObject.user;
+const address = nestedObject.address;
+const id = nestedObject.id;
 
 // expected results:
 console.log(user); // 'elvis'
 console.log(address); // { city: 'denver', state: 'colorado' }
 console.log(id); // 1
 
-// #4 Create a new object given the destructed values above
+// #3 Create a new object given the destructed values above
 
 // reconstruct here
 
-// #3 Object with key value pairs: construct a statement
-{ greeting: 'hello', name: 'taylor' }
+const newObject = {user, ...address, id};
+
+// #4 Object with key value pairs: construct a statement
+const greeting = { greeting: 'hello', name: 'taylor' };
 
 // construct statement here
+const statement = console.log(greeting.greeting + ', ' + greeting.name + '!');
 
 // expected result: 'hello, taylor!'
