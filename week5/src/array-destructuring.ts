@@ -26,6 +26,7 @@ console.log(b); // 'banana'
 console.log(others); // ['chocolate, 'pears', 'oats', 'pizza']
 
 // #3 Array: Contruct a statement
+// Not sure if this is useful: var { foo, bar } = { foo: "lorem", bar: "ipsum" };
 ['hello', 'taylor'];
 
 // construct statement here
