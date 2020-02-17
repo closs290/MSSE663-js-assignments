@@ -33,15 +33,15 @@ console.log(id); // 1
 
 // reconstruct here
 
-const newObject = {user, ...address, id};
+export const newObject = {user, ...address, id};
 
 // #4 Object with key value pairs: construct a statement
 
 // Not sure if this is useful: var { foo, bar } = { foo: "lorem", bar: "ipsum" };
 
-const greeting = { greeting: 'hello', name: 'taylor' };
+export const greeting = { greeting: 'hello', name: 'taylor' };
 
 // construct statement here
-const statement = console.log(greeting.greeting + ', ' + greeting.name + '!');
+export const statement = console.log(greeting.greeting + ', ' + greeting.name + '!');
 
 // expected result: 'hello, taylor!'
