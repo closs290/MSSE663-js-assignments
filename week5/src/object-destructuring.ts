@@ -20,9 +20,9 @@ export const nestedObject = {
 };
 
 // deconstruct here
-const user = nestedObject.user;
-const address = nestedObject.address;
-const id = nestedObject.id;
+export const user = nestedObject.user;
+export const address = nestedObject.address;
+export const id = nestedObject.id;
 
 // expected results:
 console.log(user); // 'elvis'
