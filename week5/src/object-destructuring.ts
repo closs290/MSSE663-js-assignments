@@ -36,6 +36,9 @@ console.log(id); // 1
 const newObject = {user, ...address, id};
 
 // #4 Object with key value pairs: construct a statement
+
+// Not sure if this is useful: var { foo, bar } = { foo: "lorem", bar: "ipsum" };
+
 const greeting = { greeting: 'hello', name: 'taylor' };
 
 // construct statement here
