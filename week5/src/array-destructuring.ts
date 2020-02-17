@@ -30,7 +30,7 @@ console.log(others); // ['chocolate, 'pears', 'oats', 'pizza']
 ['hello', 'taylor'];
 
 // construct statement here
-const statement = { greeting: 'hello', name: 'taylor' };
+export const statement = { greeting: 'hello', name: 'taylor' };
 
 // expected result: 'hello, taylor!'
 console.log(statement.greeting + ', ' + statement.name + '!');
