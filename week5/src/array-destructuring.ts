@@ -30,7 +30,7 @@ console.log(others); // ['chocolate, 'pears', 'oats', 'pizza']
 ['hello', 'taylor'];
 
 // construct statement here
-const statement = ['hello', 'taylor'];
-console.log(statement[0] + ', ' + statement[1] + '!');
+const statement = { greeting: 'hello', name: 'taylor' };
 
 // expected result: 'hello, taylor!'
+console.log(statement.greeting + ', ' + statement.name + '!');
