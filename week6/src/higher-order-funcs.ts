@@ -11,8 +11,15 @@
 const things = ['thing1', 'thing2'];
 
 // create callback here
+const callback = (thing: string, i: number) => {
+    return {
+        id: i + 1,
+        name: thing
+    }
+};
 
 // create map here
+export const mappedThings = things.map(callback);
 
 /**
  * #2 Higher order then curry.
@@ -22,4 +29,13 @@ const things = ['thing1', 'thing2'];
  * - Hoist that filter callback and curry all functions.
  */
 
+ interface Thing {
+     id: number;
+     name: string;
+ }
+
+
 // create function here
+const filter = (key: string) => (thing: Thing) => thing.name === key;
+
+export const filteredThing = (key: string) => mappedThings.filter(filter(key));
