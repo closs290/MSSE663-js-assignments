@@ -36,7 +36,7 @@ describe('Currying tests', () => {
   });
 
   it('#4 should return a new array of ninja objects with "status" added to each object', () => {
-    expect(ninjaWarriorsWithStatus).to.include(
+    expect(ninjaWarriorsWithStatus).to.eql(
       [
         { name: 'Michelangelo', belt: 'white', status: 'grasshopper' },
         { name: 'Donatello', belt: 'green', status: 'warrior' },
@@ -52,10 +52,10 @@ describe('Currying tests', () => {
         { name: 'Wong Fei-hung', belt: 'green', status: 'warrior' }
       ]
     );
-    expect(gamerNinjaWarriorsWithStatus).to.include([
+    expect(gamerNinjaWarriorsWithStatus).to.eql([
       { name: 'Michelangelo', belt: 'white', status: 'Noob' },
       { name: 'Donatello', belt: 'green', status: 'Choob' },
-      { name: 'Raphael', belt: 'black', black: 'Legend' },
+      { name: 'Raphael', belt: 'black', status: 'Legend' },
       { name: 'Jim', belt: 'black', status: 'Legend' },
       { name: 'The Rat', belt: 'black', status: 'Legend' }
     ]);
