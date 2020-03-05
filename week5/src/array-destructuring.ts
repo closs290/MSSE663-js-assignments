@@ -8,7 +8,7 @@ console.log(a); // 'apple'
 console.log(b); // 'banana'
 
 // deconstruct here
-[a, b] = fruits;
+export const [c, d] = fruits;
 
 // Assign variables using ES6 so that we get (note, you cannot just make a completely new array):
 console.log(a); // 'banana';
