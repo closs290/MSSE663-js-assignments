@@ -7,8 +7,8 @@ import {
     bob,
     kyle,
     newOriginalPersons,
-    newUpdate,
-    newData
+    originalUpdatedData,
+    newUpdatedData
 } from './spread';
 
 describe('spread', function() {
@@ -39,15 +39,7 @@ describe('spread', function() {
     });
 
     // #4
-    it('should modify values in arrays of objects', function() {
-        
-        assert.typeOf(newData, 'array');
-        expect(newData).to.have.lengthOf(3);
-
-        expect(newData[0]).to.have.property('id', 0);
-        expect(newData[0]).to.have.nested.property('task', 'Do the thing');
-
-        expect(newData[2]).to.have.property('id', 2);
-        expect(newData[2]).to.have.property('task', 'There is never a last task');
+    it('should modify values in arrays of objects with the spread operator', function() {
+        expect(originalUpdatedData).to.eql(newUpdatedData);
     });
 });

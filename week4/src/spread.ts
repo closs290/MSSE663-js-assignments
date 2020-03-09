@@ -64,7 +64,7 @@ export const update = {
   task: 'Do the other thing... again'
 };
 
-export const originalUpdates = data.map(task => {
+export const originalUpdatedData = data.map(task => {
   if (task.id === update.id) {
     return Object.assign(task, update);
   }
@@ -73,19 +73,18 @@ export const originalUpdates = data.map(task => {
 
 // refactor here
 export const newUpdate = {
-  id: 2,
-  task: 'There is never a last task'
+  id: 1,
+  task: 'Do the other thing... again'
 };
-export const newData = data.map(task => {
-  if (task.id === newUpdate.id) {
-    task = newUpdate;
+
+export const newUpdatedData =  data.map(task => {
+  if (task.id === update.id) {
+    return { ...newUpdate };
   }
   return task;
 });
 
-// export const newData = [...data, newUpdate];
-
 console.log("\n\nMy refactor #4:");
-newData.map(printTask => {
+data.map(printTask => {
   console.log(printTask.id.toString() + ': ' + printTask.task.toString());
 })
