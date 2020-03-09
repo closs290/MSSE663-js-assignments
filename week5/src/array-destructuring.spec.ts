@@ -4,7 +4,7 @@ import {
   a, b, c, d,
   others,
   statement
-} from './array-destructuring.ts';
+} from './array-destructuring';
 
 describe('Array destructuring tests', () => {
   it('#1 should have a variable for every element in the given array', () => {
@@ -14,8 +14,8 @@ describe('Array destructuring tests', () => {
   });
 
   it('#2 should have a variable for the first 2 elements then spread the rest', () => {
-    expect(c).to.eql('banana');
-    expect(d).to.eql('apple');
+    expect(c).to.eql('apple');
+    expect(d).to.eql('banana');
     expect(others).to.eql(['chocolate', 'pears', 'oats', 'pizza']);
   });
 

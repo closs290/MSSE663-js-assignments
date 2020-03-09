@@ -28,6 +28,6 @@ describe('Object destructuring tests', () => {
   });
 
   it('#4 should construct a statement from the given object', () => {
-     expect(statement).to.eql('hello, taylor');
+     expect(statement).to.eql('hello, taylor!');
   });
 });
