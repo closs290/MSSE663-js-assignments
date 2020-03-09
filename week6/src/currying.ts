@@ -1,11 +1,16 @@
 // #1 Convert this javascript function to a curried function
-// export function curryMe(string1, string2, string3): string {
-//   return string1 + ' ' + string2 + ' ' + string3;
-// }
+export function curryMe(string1: string, string2: string, string3: string): string {
+  return string1 + ' ' + string2 + ' ' + string3;
+}
 
 // source code here
 // const a = [].map(val => val);
 // export const IWillCurryYou = [...string1, string2, string3[...]]
+
+export const IWillCurryYou = (a: string) => (b: string) => (c: string) => {
+  return a + ' ' + b + ' ' + c;
+}
+
 
 // #2 Hoist and convert nested functions to curried functions
 // function doMath(a) {

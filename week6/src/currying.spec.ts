@@ -1,18 +1,17 @@
 import { expect } from 'chai';
 import 'mocha';
 import {  
-  //curryMe,
-          // IWillCurryYou,
-          doMath,
-          ninjaWarriorsWithStatus,
-          gamerNinjaWarriorsWithStatus, 
-          ninjasWithBlackBelts} from './currying';
-
-// Immutability is reusability
+    curryMe,
+    IWillCurryYou,
+    doMath,
+    ninjaWarriorsWithStatus,
+    gamerNinjaWarriorsWithStatus, 
+    ninjasWithBlackBelts
+} from './currying';
 
 describe('Currying tests', () => {
   it('#1 should output the same result as the original function', () => {
-    // expect(IWillCurryYou('hello')('world').to.equal(curryMe('hello', 'world', '!')));
+    expect( IWillCurryYou('hello')('world')('!') ).to.equal( curryMe('hello', 'world', '!') );
   });
 
   it('#2 should output the same result as the original function', () => {
